@@ -43,7 +43,7 @@ class App extends React.Component {
   };
  
   renderBooks() {
-    let books = <h1>No Books</h1>;
+    let books = <h3 className="text-center text-white">No Books</h3>;
     if (this.state.books) {
       books = <BookListComponent list={this.state.books} />;
     }
@@ -52,7 +52,6 @@ class App extends React.Component {
   };
 
   render () {
-
     return (
       <div className="container-fluid">
         <div className="row">

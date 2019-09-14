@@ -2,9 +2,8 @@
   width: 18rem;
 }
 
-.container-fluid {
+body {
   background-color: black;
-  height: 200vh;
 }
 
 .center-block {
