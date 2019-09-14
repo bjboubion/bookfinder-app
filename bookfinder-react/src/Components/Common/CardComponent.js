@@ -17,8 +17,8 @@ const CardComponent = (props) => {
     }
 
    
-    let card = <div className="card">
-                <img src={imageLinks.thumbnail} className="card-img-top" alt="..." />
+    let card = <div className="card my-3">
+                <img src={imageLinks.thumbnail} className="card-img-top" alt="..." height="300" />
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
                     <small className="text-muted">{viewDescription.length > 200 ? `${viewDescription.substring(0, 200)}...` : viewDescription}</small>

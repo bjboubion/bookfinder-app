@@ -2,7 +2,7 @@ import React from 'react';
 import CardComponent from './Components/Common/CardComponent';
 
 export const BookListComponent = ({ list }) => {
-    let cards = <h3>Loading...</h3>;
+    let cards = <h3 className="text-center">Loading...</h3>;
 
     if (list) {
         cards = list.map((item, num) => (

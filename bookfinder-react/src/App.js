@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Axios from 'axios';
 import { BookListComponent } from './BookListComponent';
+import loader from './loader.gif';
 
 class App extends React.Component {
   constructor(props) {
@@ -49,13 +50,15 @@ class App extends React.Component {
 
     return books;
   };
-  
-  
+
   render () {
+
     return (
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
+
+          <h2 className="text-center my-5 text-white">Bookfinder App</h2>
 
           <form className="my-3 text-center" onSubmit={this.handleSubmit}>
               <div className="input-group mb-3">
@@ -72,7 +75,7 @@ class App extends React.Component {
                 </div>
               </div>
             </form>
-              {this.renderBooks()}
+              {this.state.loading ? <img className="center-block" src={loader} alt="loading gif" /> : this.renderBooks()}
           </div>
         </div>
       </div>
