@@ -1,0 +1,4 @@
+[build]
+base = "bookfinder-react/"
+publish = "bookfinder-react/build/"
+command = "yarn build"
