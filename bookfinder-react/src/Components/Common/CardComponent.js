@@ -2,7 +2,7 @@ import React from 'react';
 import '../../App.css';
 
 const CardComponent = (props) => {
-    const { imageLinks, title, description, infoLink, publisher, author } = props.item.volumeInfo;
+    const { imageLinks, title, description, infoLink, publisher } = props.item.volumeInfo;
     
     let viewDescription;
     
