@@ -16,7 +16,7 @@ const CardComponent = (props) => {
     }
    
     let card = <div className="card border-dark my-3">
-                <img src={imageLinks === undefined ? "" : imageLinks.thumbnail} className="card-img-top" alt={title} height="300" />
+                <img src={imageLinks === undefined ? "" : imageLinks.thumbnail.replace("http", "https")} className="card-img-top" alt={title} height="300" />
                 <div className="card-body">
                     <h4 className="card-title">{title}</h4>
                     <p className="text-muted">{publisher}</p>
