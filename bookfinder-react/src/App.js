@@ -3,6 +3,7 @@ import './App.css';
 import Axios from 'axios';
 import { BookListComponent } from './BookListComponent';
 import loader from './loader.gif';
+import SearchComponent from './Components/Form/SearchComponent';
 
 class App extends React.Component {
   constructor(props) {
@@ -53,28 +54,15 @@ class App extends React.Component {
 
   render () {
     return (
-      <div className="container-fluid">
+      <div className="container">
         <div className="row">
           <div className="col-md-12">
-
-          <h2 className="text-center my-5 text-white">Bookfinder App</h2>
-
+          <h1 className="text-center mt-5 text-white">Bookfinder App</h1>
+          <h4 className="text-white text-center mb-5">Author: bjboubion, aka mamba_mentality</h4>
           <form className="my-3 text-center" onSubmit={this.handleSubmit}>
-              <div className="input-group mb-3">
-                <input 
-                  type="text" 
-                  value={this.state.value}
-                  onChange={this.handleChange}
-                  className="form-control" 
-                  placeholder="Search for a book!" 
-                  aria-label="Search for a book!" 
-                  aria-describedby="basic-addon2" />
-                <div className="input-group-append">
-                  <input className="btn btn-success" type="submit" value="Submit" />
-                </div>
-              </div>
-            </form>
-              {this.state.loading ? <img className="center-block" src={loader} alt="loading gif" /> : this.renderBooks()}
+            <SearchComponent value={this.state.value} handleChange={this.handleChange} />
+          </form>
+            {this.state.loading ? <img className="center-block" src={loader} alt="loading gif" /> : this.renderBooks()}
           </div>
         </div>
       </div>
