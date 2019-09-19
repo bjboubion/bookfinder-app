@@ -2,6 +2,3 @@
 Authored by Bryan Boubion
 Bootstrapped using CRA
 
-## Description
-Description
-
